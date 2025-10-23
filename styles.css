@@ -1,8 +1,8 @@
 :root {
   --accent: hsl(75, 94%, 57%);
   --white: hsl(0, 0%, 100%);
-  --card-background: hsl(0, 0%, 20%);
-  --link-background: hsl(0, 0%, 12%);
+  --link-background: hsl(0, 0%, 20%);
+  --card-background: hsl(0, 0%, 12%);
   --background: hsl(0, 0%, 8%);
 }
 
@@ -16,4 +16,37 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: var(--background);
+}
+
+/* Card Syling */
+.card {
+  background-color: var(--card-background);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 1.5em;
+  color: var(--white);
+  border-radius: 6%;
+  width: 300px;
+}
+
+.avatar {
+  border-radius: 50%;
+}
+
+span {
+  color: var(--accent);
+}
+
+.links div {
+  background-color: var(--link-background);
+  border: 1px solid var(--link-background);
+  margin: 10px;
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.links div:hover {
+  cursor: pointer;
 }
