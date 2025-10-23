@@ -1,3 +1,4 @@
+/* Root variables */
 :root {
   --accent: hsl(75, 94%, 57%);
   --white: hsl(0, 0%, 100%);
@@ -6,6 +7,7 @@
   --background: hsl(0, 0%, 8%);
 }
 
+/* Global styles */
 body {
   margin: 0;
   padding: 0;
@@ -19,7 +21,7 @@ body {
   background-color: var(--background);
 }
 
-/* Card Syling */
+/* Card styling */
 .card {
   background-color: var(--card-background);
   display: flex;
@@ -31,6 +33,9 @@ body {
   width: 300px;
 }
 
+/*
+   Elements inside card
+    */
 .avatar {
   border-radius: 50%;
 }
@@ -59,4 +64,64 @@ span {
 
 .links div:hover {
   cursor: pointer;
+}
+
+/*
+   Responsive design
+    */
+
+/* Tablet and up (min-width: 768px) */
+@media (min-width: 768px) {
+  .card {
+    width: 400px;
+    padding: 2em;
+    border-radius: 10px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
+
+  .links div {
+    padding: 1.2em;
+  }
+}
+
+/* Desktop (min-width: 1024px) */
+@media (min-width: 1024px) {
+  body {
+    background-color: var(--background);
+    flex-direction: row;
+  }
+
+  .card {
+    width: 450px;
+    padding: 2.5em;
+    border-radius: 12px;
+  }
+
+  h3 {
+    font-size: 26px;
+  }
+
+  .links div {
+    margin: 12px 0;
+    transition: background-color 0.2s ease;
+  }
+
+  .links div:hover {
+    background-color: var(--accent);
+    color: var(--background);
+  }
+}
+
+/* Very large screens (min-width: 1440px) */
+@media (min-width: 1440px) {
+  .card {
+    width: 500px;
+  }
+
+  body {
+    gap: 2rem;
+  }
 }
